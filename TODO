@@ -1,0 +1,9 @@
+- Image names shouldn't *start* with a dash, really.
+- Split cards. The bot expects one half [Fire] or the other [Ice] but the image server expects both. So either the bot doesn't respond or if it does it doens't get an image.  We should support: [Fire], [Fire / Ice] and [Fire // Ice] and variations ignoring whitespace.
+- EMN and other smaller images look stupid when joined. Normalize size before joining on the image server.
+- More than one image at once gives "no image available" when falling back to mtgsdk images because the SDK only supports single images. We could send each separately or only send the first rather than "no image available"?
+- Ability to search like magidex syntax
+- [bottle gomes|mrd] <-- support some syntax (possibly this) for getting the specific version of an image.
+- Max 255 chars for filename length is cutting it too fine given that we have to add an extension so cut off at a lower number.
+- Add --local commandline option that causes the bot to run locally and receive commands from commandline instead of (as well as?) connecting to discord.
+- As of Sep 26th we are still uploading zero byte files sometimes despite the checks we have -- what's going on?
